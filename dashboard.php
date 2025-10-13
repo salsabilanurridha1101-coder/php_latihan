@@ -1,7 +1,10 @@
 <?php
 session_start();
 
-//JIKA SESSION 'EMAIL' MATI, 
+//JIKA SESSION 'EMAIL' MATI, MAKA KEMBALI KE 9.PHP//
+if (empty($_SESSION['EMAIL'])) {
+    header('location;9.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,8 +16,7 @@ session_start();
 </head>
 
 <body>
-    <h1>SYELAMAT DATYANGH QHA QHA <?php echo $_SESSION['EMAIL'] ?> </h1>
-
+    <h1>SYELAMAT DATYANGH QHA QHA <?php echo $_SESSION['EMAIL'] ?></h1><br>
     <button>
         <a href="logout.php">log-out</a>
     </button>
