@@ -22,8 +22,13 @@
 
 <?php
 
-if (isset ($_POST['kirim'])){
-    $nama = $_POST ['nama'];
+if (isset($_POST['kirim'])) {
+    $nama = $_POST['nama'];
     echo "nama saya adalah" . $nama;
 }
 ?>
+
+$UangSendiri = 35000;   
+$UangTeman = 500000;
+$hasil = $UangSendiri + $UangTeman;
+echo "Hasil penjumlahan dari $UangSendiri dan $UangTeman adalah $hasil";
