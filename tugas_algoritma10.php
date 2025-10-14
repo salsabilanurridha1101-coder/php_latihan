@@ -1,20 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celcius Fahrenheit Converter</title>
-</head>
-
-<body>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <input type="number" name="celcius" id="celcius" required>
-        <br>
-        <button type="submit" name="submit">submit</button>
+<!-- Algoritma Kesepuluh -->
+<section>
+    <h2>Algoritma Kesepuluh</h2>
+    <form method="post">
+        <input type="number" name="angka10" placeholder="Masukkan sembarang angka" required>
+        <button type="submit" name="cek_positif">Cek Angka</button>
     </form>
     <?php
-    ?>
-</body>
+    if (isset($_POST['cek_positif'])) {
+        $angka10 = $_POST['angka10'];
+        echo "<div class='result'>";
+        echo "Input: $angka10 <br>";
 
-</html>
+        if ($angka10 > 0) {
+            echo "<strong>Angka Positif</strong>";
+        } elseif ($angka10 == 0) {
+            echo "<strong>Angka Nol</strong>";
+        } else {
+            echo "<strong>Angka Negatif</strong>";
+        }
+
+        echo "</div>";
+    }
+    ?>
+</section>
