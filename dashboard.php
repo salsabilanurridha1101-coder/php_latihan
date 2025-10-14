@@ -1,5 +1,6 @@
 <?php
 session_start();
+session_regenerate_id();
 
 //JIKA SESSION 'EMAIL' MATI, MAKA KEMBALI KE 9.PHP//
 if (empty($_SESSION['EMAIL'])) {
