@@ -10,31 +10,23 @@
 <body>
     <form action=" " method="post" enctype="multipart/form-data">
         <label for="">Uang Sendiri</label>
-        <input type="number" name="uangSendiri" placeholder="Isi uang sendiri"><br>
+        <input type="number" name="uangSendiri"><br>
         <label for="">Uang Teman</label>
-        <input type="number" name="uangTeman" placeholder="Isi uang teman anda"><br>
-
-
-
-        <button type="submit" name="jumalahkan">Jumlahkan</button>
-
+        <input type="number" name="uangTeman"><br>
+        <button type="submit" name="hitung">hitung</button>
     </form>
+    
 </body>
 
 </html>
 
 <?php
+if (isset($_POST['hitung'])) {
+    $uangSendiri = floatval($_POST['uangSendiri']);
+    $uangTeman = floatval($_POST['uangTeman']);
+    $hitung = $uangSendiri + $uangTeman;
 
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $angka1 = intval($_POST['uangSendiri']);
-    $angka2 = intval($_POST['uangTeman']);
-
-
-    $hasil = $angka1 + $angka2;
-
-
-    echo "Hasil penjumlahan dari " . $angka1 . " + " . $angka2 . " adalah: " . $hasil;
+    echo "<h3>Nilainya: Rp. " . number_format($hitung, 2, ',', '.') . "</h3>";
 }
 ?>
+</body>

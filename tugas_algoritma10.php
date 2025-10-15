@@ -1,25 +1,22 @@
-<!-- Algoritma Kesepuluh -->
-<section>
-    <h2>Algoritma Kesepuluh</h2>
-    <form method="post">
-        <input type="number" name="angka10" placeholder="Masukkan sembarang angka" required>
-        <button type="submit" name="cek_positif">Cek Angka</button>
-    </form>
-    <?php
-    if (isset($_POST['cek_positif'])) {
-        $angka10 = $_POST['angka10'];
-        echo "<div class='result'>";
-        echo "Input: $angka10 <br>";
-
-        if ($angka10 > 0) {
-            echo "<strong>Angka Positif</strong>";
-        } elseif ($angka10 == 0) {
-            echo "<strong>Angka Nol</strong>";
-        } else {
-            echo "<strong>Angka Negatif</strong>";
-        }
-
-        echo "</div>";
+<?php
+$result = "";
+if (isset($_POST['nilai'])) {
+    $nilai = $_POST['nilai'];
+    if ($nilai > 0) {
+        $result = "Nilai Positif";
+    } elseif ($nilai == 0) {
+        $result = "nilai 0";
+    } elseif ($nilai == null) {
+        $result = "";
+    } elseif ($nilai < 0) {
+        $result = "Nilai Negatif";
     }
-    ?>
-</section>
+}
+?>
+
+<form action="" method="post">
+    <input type="number" name="nilai" re><br>
+    <button type="submit" name="cek">cek</button>
+</form>
+<span><?php echo $result; ?></span>
+

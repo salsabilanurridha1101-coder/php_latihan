@@ -4,11 +4,12 @@ $NamaTengah = 'Ridha';
 $NamaBelakang = 'Salsabila';
 
 
-var_dump($NamaDepan);
-echo "<br>";
-var_dump($NamaTengah);
-echo "<br>";
-var_dump($NamaBelakang);
-echo "<br>";
-echo "Hello Nama Saya, $NamaDepan  $NamaTengah $NamaBelakang <br>";
+echo $NamaDepan;;
 ?>
+
+<form action="" method="post">
+    <input type="NamaDepan"><br>
+    <input type="NamaTengah"><br>
+    <input type="NamaBelakang"><br>
+    <button>cari</button>
+</form>

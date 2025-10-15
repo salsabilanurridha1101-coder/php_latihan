@@ -12,5 +12,5 @@
 
 <?php
 $nama = 'nur ridha salsabila';
-echo "Hello Selamat Datang, $nama <br>";
+echo $nama;
 ?>

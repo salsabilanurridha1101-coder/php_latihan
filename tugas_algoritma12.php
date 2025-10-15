@@ -1,4 +1,4 @@
-<?php  ?>
+
 <main class="w-full">
     <?php
     $input1 = $_POST['number_1'] ?? 0;
@@ -32,3 +32,10 @@
     }
     ?>
 </main>
+ <form action="" method="post"></form>
+    <input type="number" name="angka1"><br>
+    <input type="number" name="angka2"><br>
+    <input type="number" name="angka3"><br>
+    <input type="number" name="angka4"><br>
+    <
+
